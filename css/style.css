@@ -243,23 +243,20 @@ body.border-dark .main-content:after{
 =======================================================*/
 .section-main{
 	background-size:cover;
-	background-image:url(../img/bg.png);
+	background-image:url(../img/bg.jpg);
 }
 .resume-section{
-	background-size:cover;
-	background-image:url(../img/bg2.png);
+	background:white;
 }
 .about-text h3{
 	    font-size: 22px;
     font-family: cursive;
 }
 .portfolio-section{
-background-size:cover;
-	background-image:url(../img/bg2.png);
+background:white;
 }
 .contact-section{
-background-size:cover;
-	background-image:url(../img/bg2.png);
+background:white;
 }
 .marginbtn{
 	margin-top:-5%;
@@ -279,38 +276,8 @@ background-size:cover;
 	opacity:.8;
 	z-index:-1;
 }
-.intro-text{
-	padding:20px;
-	text-align:center;
-}
-.intro-text > h1{
-   margin: 0;
-    color: black;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 0px;
-    font-size: 55px;
-    font-family: cursive;
-    text-align: left;
-}
-.intro-text > p{
-	font-size: 18px;
-    color: #FFF;
-    color: black;
-    margin-top: 15px;
-    margin-bottom: 0;
-    font-weight: 300;
-    font-style: italic;
-    letter-spacing: 2px;
-    text-align: left;
-    font-family: cursive;
-}
-.intro-text > .intro-btns{
-	margin-top:45px;
-	    text-align: left;
-}
-.intro-text > .intro-btns > .btn-custom{
-	margin:0 15px;
+.marbutton{
+	margin-right:4%;
 }
 a.btn-custom{
 	color:#000;
@@ -353,7 +320,7 @@ a.btn-custom{
 	z-index:-1;
 	opacity:0;
 	visibility:hidden;
-	background:rgb(255 255 255);
+	background:#e25e8387;
 	-webkit-transition:all .3s cubic-bezier(.785,.135,.15,.86);
 	-moz-transition:all .3s cubic-bezier(.785,.135,.15,.86);
 	transition:all .3s cubic-bezier(.785,.135,.15,.86);
@@ -558,8 +525,7 @@ body.section-switching.up .animation-block{
 	About Section
 =======================================================*/
 .about-section{
-		background-size:cover;
-	background-image:url(../img/bg2.png);
+	background:white;
 }
 .about-block .section-header{
 	margin-bottom:80px;
@@ -706,7 +672,7 @@ body.section-switching.up .animation-block{
 	display:block;
 	width:100%;
 	height:3px;
-	background:#FFF;
+	background:#e25e83;
 	-webkit-transition:background 2.5s cubic-bezier(.785,.135,.15,.86);
 	-moz-transition:background 2.5s cubic-bezier(.785,.135,.15,.86);
 	transition:background 2.5s cubic-bezier(.785,.135,.15,.86);
@@ -1762,9 +1728,287 @@ position: absolute;
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  
   border-top: none;
+}
+#app {
+  z-index: 100;
+}
+
+
+#app {
+  display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: ;
+    padding-bottom: 0vmin;
+    height: auto;
+    width: 100%;
+    color: #3a3535;
+    margin-top: 0%;
 }
 
 
 
+.title {
+  padding-left: 1em;
+  grid-column: 1/-1;
+  grid-row: 1;
+  
+  font-size: 58px;
+  width: 100%;
+  z-index: 2;
+}
+.title > .title-inner {
+  display: inline-block;
+      margin-top: 14%;
+	      margin-left: 10%;
+}
+
+@-webkit-keyframes text-clip {
+  from {
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes text-clip {
+  from {
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@-webkit-keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+.cafe,
+.mozart {
+  -webkit-animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title-inner {
+  display: inline-block;
+  -webkit-animation: inner-left 1s 1s ease both;
+          animation: inner-left 1s 1s ease both;
+}
+
+.cafe-inner {
+  display: inline-block;
+  -webkit-animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.mozart-inner {
+  -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+		  font-size: 38px;
+    font-family: cursive;
+}
+
+.title {
+  -webkit-animation: outer-left 1s 1s ease both;
+          animation: outer-left 1s 1s ease both;
+}
+
+.cafe > .cafe-inner {
+	
+    font-size: 75px;
+    font-weight: bold;
+    font-family: cursive;
+
+  display: inline-block;
+}
+
+.mozart {
+  display: inline-block;
+}
+
+.image {
+  grid-row: 1;
+  grid-column: 2;
+  margin-left: -2rem;
+  opacity: 0.7;
+  -webkit-animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+          animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+@-webkit-keyframes image-in {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes image-in {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body:active * {
+  -webkit-animation: none !important;
+          animation: none !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+ .cafe > .cafe-inner {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: cursive;
+    display: inline-block;
+}
+.mozart-inner {
+    -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    font-size: 21px;
+    font-family: cursive;
+}
+.btn-custom {
+    color: #FFF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    *: ;
+    display: inline;
+    *: ;
+    zoom: 1;
+    line-height: 1em;
+    padding: 12px 11px;
+    position: relative;
+    font-weight: bold;
+    font-family: cursive;
+    z-index: 5;
+    background: transparent;
+    border: none;
+}
+.image {
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: -32%;
+    opacity: 0.7;
+    -webkit-animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+    animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+.title > .title-inner {
+    display: inline-block;
+    margin-top: 64%;
+    margin-left: 0%;
+}
+.about-block .section-header {
+    margin-bottom: 37px;
+}
+.section-header > h2 {
+    font-weight: 200;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 26px;
+    font-family: cursive;
+    color: black;
+    margin-top: 29%;
+    text-align: center;
+}
+.about-text h3 {
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+}
+.about-text h2 {
+    font-size: 32px;
+    font-family: cursive;
+    text-align: center;
+}
+.about-text > p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.8em;
+    font-family: cursive;
+    text-align: center;
+    /* margin-bottom: 8%; */
+}
+.about-btns > .btn-custom {
+    margin-right: 12px;
+}
+.section-header > h2 {
+    font-weight: 200;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 26px;
+    font-family: cursive;
+    color: black;
+    margin-top: 26%;
+    text-align: center;
+}
+.nopadding{
+	padding:0px;
+}
+.gmailfont {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: cursive;
+}
+.contactgirl {
+    position: absolute;
+    left: -7%;
+    width: 100%;
+    margin-top: -7%;
+}
+.contact-block .section-header {
+    margin-bottom: 40px;
+}
+}
