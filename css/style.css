@@ -205,7 +205,8 @@ Main Section
 .section-main{
 background-size:cover;
 /*background-image:url(../img/bg.jpg);*/
-background: linear-gradient(90deg, hsla(206, 75%, 72%, 1) 0%, hsla(306, 75%, 72%, 1) 100%);
+background: linear-gradient(90deg, hsl(206deg 40.12% 85.09%) 0%, #e25e83 100%) !important;
+
 }
 .resume-section{
 background:white;
