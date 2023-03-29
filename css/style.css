@@ -2053,7 +2053,7 @@ a.btn-custom{
 	z-index:-1;
 	opacity:0;
 	visibility:hidden;
-	background:#e25e8387;
+	background:#fff;
 	-webkit-transition:all .3s cubic-bezier(.785,.135,.15,.86);
 	-moz-transition:all .3s cubic-bezier(.785,.135,.15,.86);
 	transition:all .3s cubic-bezier(.785,.135,.15,.86);
