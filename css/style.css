@@ -204,7 +204,8 @@ Main Section
 =======================================================*/
 .section-main{
 background-size:cover;
-background-image:url(../img/bg.jpg);
+/*background-image:url(../img/bg.jpg);*/
+background: linear-gradient(90deg, hsla(206, 75%, 72%, 1) 0%, hsla(306, 75%, 72%, 1) 100%);
 }
 .resume-section{
 background:white;
